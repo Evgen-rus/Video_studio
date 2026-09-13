@@ -1,0 +1,21 @@
+{
+  "server": "mock_server.py",
+  "base_url": "http://127.0.0.1:4173",
+  "fictional_only": true,
+  "states": [
+    "rop-dashboard", "attention-deal", "rop-daily-1545", "rop-daily-2300",
+    "manager-tasks-before", "manager-confirmed-after", "manager-add-context",
+    "manager-quick-help", "manager-companion", "rop-control", "admin-ai-spend", "admin-event-detail"
+  ],
+  "roles": ["rop", "manager", "admin"],
+  "demo_ids": ["DEMO-PILOT-SEVER", "DEMO-TASK-1", "DEMO-JOB-1"],
+  "external_calls": false,
+  "screenshots": [
+    "screens/01-rop-dashboard.jpg", "screens/02-rop-attention.jpg",
+    "screens/03-rop-daily-1545.jpg", "screens/04-rop-daily-2300.jpg",
+    "screens/05-manager-tasks-before.jpg", "screens/06-manager-confirmed-after.jpg",
+    "screens/07-manager-add-context.jpg", "screens/08-manager-quick-help.jpg",
+    "screens/09-manager-companion.jpg", "screens/10-rop-control.jpg",
+    "screens/11-admin-ai-spend.jpg", "screens/12-admin-event-detail.jpg"
+  ]
+}
