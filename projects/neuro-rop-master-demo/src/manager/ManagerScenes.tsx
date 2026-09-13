@@ -87,6 +87,7 @@ export const ManagerQuickHelpScene: React.FC = () => (
     src={MANAGER_CAPTURES.quickHelp}
     target={MANAGER_RECTS.quickMessage}
     accent="#2d77ee"
+    compactNote
     caption={<Caption top={82}>Дожим · следующий шаг</Caption>}
   />
 );

@@ -9,7 +9,8 @@ export const SpotlightHero: React.FC<{
   target: Rect;
   accent?: string;
   caption?: React.ReactNode;
-}> = ({src, target, accent = '#e8a42c', caption}) => {
+  compactNote?: boolean;
+}> = ({src, target, accent = '#e8a42c', caption, compactNote = false}) => {
   const frame = useCurrentFrame();
   const targetX = target.x + target.w / 2;
   const targetY = target.y + target.h / 2;
@@ -49,8 +50,8 @@ export const SpotlightHero: React.FC<{
           ) : null}
         </ScreenshotCrop>
         {markerOpacity > 0.02 ? <ScreenMarker rect={target} color={accent} opacity={markerOpacity} pulse /> : null}
-        {frame >= 84 && frame <= 190 ? (
-          <div style={{position: 'absolute', left: Math.max(60, target.x - 300), top: target.y - 64, width: 255, transform: `translateZ(${80 + Math.sin((frame - 84) / 40) * 3}px) translateY(${(1 - noteIn) * 18}px)`, opacity: noteIn * noteOut, color: '#122b4d', fontFamily: 'Georgia, serif', fontSize: 31, fontWeight: 600, lineHeight: 1.12, textAlign: 'right', pointerEvents: 'none'}}>
+        {!compactNote && frame >= 84 && frame <= 190 ? (
+          <div style={{position: 'absolute', left: Math.max(60, target.x - (compactNote ? 255 : 300)), top: target.y - (compactNote ? 52 : 64), width: compactNote ? 220 : 255, transform: `translateZ(${80 + Math.sin((frame - 84) / 40) * 3}px) translateY(${(1 - noteIn) * 18}px)`, opacity: noteIn * noteOut * (compactNote ? 0.84 : 1), color: '#122b4d', fontFamily: 'Georgia, serif', fontSize: compactNote ? 25 : 31, fontWeight: 600, lineHeight: 1.12, textAlign: 'right', pointerEvents: 'none'}}>
             <span>Фокус на</span><br /><span style={{color: '#1668e8'}}>следующем шаге</span>
           </div>
         ) : null}
