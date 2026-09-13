@@ -1,0 +1,22 @@
+{
+  "name": "neuro-rop-first-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "list": "remotion compositions src/index.ts",
+    "build": "remotion compositions src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "studio": "remotion studio src/index.ts --no-open",
+    "render": "remotion render src/index.ts NeuroRopPromo out/neuro-rop-first-test.mp4",
+    "still": "remotion still src/index.ts NeuroRopPromo"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.523",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.523"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2"
+  }
+}
