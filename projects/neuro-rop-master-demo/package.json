@@ -13,7 +13,8 @@
     "render:short": "remotion render src/index.ts RopChapterPreview out/rop-chapter.mp4 --frames=0-270",
     "render:manager:short": "remotion render src/index.ts NeuroRopManager out/manager-preview.mp4 --frames=0-270",
     "render:admin:short": "remotion render src/index.ts NeuroRopAdmin out/admin-preview.mp4 --frames=0-270",
-    "render:outro:short": "remotion render src/index.ts NeuroRopOutro out/outro-preview.mp4 --frames=0-180"
+    "render:outro:short": "remotion render src/index.ts NeuroRopOutro out/outro-preview.mp4 --frames=0-180",
+    "render:master:final": "remotion render src/index.ts NeuroRopMaster out/neuro-rop-master-demo-final.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.523",

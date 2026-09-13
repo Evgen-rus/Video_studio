@@ -44,6 +44,9 @@ projects/**/out/**/*.webm
 projects/**/out/**/*.png
 projects/**/out/**/*.jpg
 
+# Project-local licensed BGM copies stay outside Git; keep the original asset external.
+projects/neuro-rop-master-demo/public/audio/neuro-rop-bgm.mp3
+
 # Raw screen recordings are usually large and may contain private data
 assets/recordings/**/*.mp4
 assets/recordings/**/*.mov

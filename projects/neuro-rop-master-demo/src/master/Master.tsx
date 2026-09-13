@@ -4,9 +4,10 @@ import {NeuroRopAdmin, ADMIN_CHAPTER_FRAMES} from '../admin/AdminChapter';
 import {NeuroRopManager, MANAGER_CHAPTER_FRAMES} from '../manager/ManagerChapter';
 import {NeuroRopOutro, OUTRO_FRAMES} from '../outro/OutroChapter';
 import {RopChapter, ROP_CHAPTER_FRAMES} from '../rop/RopChapter';
+import {BgmLayer} from '../shared/BgmLayer';
 import {SfxLayer} from '../shared/SfxLayer';
 import {MasterRoleBridge} from './MasterRoleBridge';
-import {MASTER_BRIDGE_FRAMES, MASTER_SFX} from './timeline';
+import {MASTER_BGM_CUE_FRAMES, MASTER_BRIDGE_FRAMES, MASTER_SFX} from './timeline';
 
 export const MASTER_CHAPTER_FRAMES = ROP_CHAPTER_FRAMES + MASTER_BRIDGE_FRAMES + MANAGER_CHAPTER_FRAMES + MASTER_BRIDGE_FRAMES + ADMIN_CHAPTER_FRAMES + MASTER_BRIDGE_FRAMES + OUTRO_FRAMES;
 
@@ -33,6 +34,7 @@ export const NeuroRopMaster: React.FC = () => {
       </Sequence>
       <Sequence from={outroBridge + MASTER_BRIDGE_FRAMES} durationInFrames={OUTRO_FRAMES}><NeuroRopOutro /></Sequence>
       <SfxLayer cues={MASTER_SFX} />
+      <BgmLayer durationInFrames={MASTER_CHAPTER_FRAMES} cueFrames={MASTER_BGM_CUE_FRAMES} />
       <div style={{position: 'absolute', inset: 0, pointerEvents: 'none', boxShadow: 'inset 0 0 110px rgba(18,43,77,.08)'}} />
     </AbsoluteFill>
   );
