@@ -37,6 +37,13 @@ renders/**/*.avi
 tools/remotion-smoke/out/*
 !tools/remotion-smoke/out/.gitkeep
 
+# Per-project render outputs: keep source captures/manifests and text QA reports trackable.
+projects/**/out/**/*.mp4
+projects/**/out/**/*.mov
+projects/**/out/**/*.webm
+projects/**/out/**/*.png
+projects/**/out/**/*.jpg
+
 # Raw screen recordings are usually large and may contain private data
 assets/recordings/**/*.mp4
 assets/recordings/**/*.mov

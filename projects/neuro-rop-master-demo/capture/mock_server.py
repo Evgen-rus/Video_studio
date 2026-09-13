@@ -6,6 +6,7 @@ fixture. No CRM, Bitrix, OpenAI, or product backend is started.
 
 from __future__ import annotations
 
+import argparse
 import json
 import mimetypes
 import os
@@ -18,7 +19,8 @@ from urllib.parse import parse_qs, unquote, urlparse
 
 HOST = "127.0.0.1"
 PORT = 4173
-DIST = Path(r"D:\My_dev_project\Neuro_rop_practice\frontend\dist")
+DEFAULT_DIST = Path(r"D:\My_dev_project\Neuro_rop_practice\frontend\dist")
+DIST = Path(os.environ.get("NEUROROP_FRONTEND_DIST", str(DEFAULT_DIST))).expanduser().resolve()
 DEMO_DATE = "2026-09-13"
 CAPTURE_DIR = Path(__file__).resolve().parent / "screens"
 
@@ -492,6 +494,14 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Serve the fictional Neuro ROP capture fixture")
+    parser.add_argument(
+        "--frontend-dist",
+        type=Path,
+        default=DIST,
+        help="frontend dist directory (default: NEUROROP_FRONTEND_DIST or the legacy absolute path)",
+    )
+    DIST = parser.parse_args().frontend_dist.expanduser().resolve()
     os.chdir(DIST)
     print(f"Serving fictional Neuro ROP capture at http://{HOST}:{PORT}")
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
