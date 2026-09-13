@@ -59,7 +59,7 @@ export const RopDailyScene: React.FC = () => {
   const labelOpacity = interpolate(frame, [8, 24], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.2, 0.8, 0.2, 1)});
   return (
     <AbsoluteFill style={{backgroundColor: '#edf2f8'}}>
-      <HiddenCut fromSrc={CAPTURES.daily1545} toSrc={CAPTURES.daily2300} cut={103} />
+      <HiddenCut fromSrc={CAPTURES.daily1545} toSrc={CAPTURES.daily2300} cut={103} trailBlur={0} cardBlur={0} />
       <Caption top={82} opacity={labelOpacity}>Ежедневный контроль</Caption>
       <div style={{position: 'absolute', right: 92, top: 78, color: '#527094', fontFamily: 'Arial, sans-serif', fontSize: 21, fontWeight: 700, opacity: 0.9}}>{frame < 103 ? '15:45' : '23:00'}</div>
     </AbsoluteFill>

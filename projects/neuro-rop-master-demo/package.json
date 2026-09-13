@@ -7,7 +7,13 @@
     "build": "remotion compositions src/index.ts",
     "typecheck": "tsc --noEmit",
     "still": "remotion still src/index.ts RopChapterPreview",
-    "render:short": "remotion render src/index.ts RopChapterPreview out/rop-chapter.mp4 --frames=0-270"
+    "still:manager": "remotion still src/index.ts NeuroRopManager",
+    "still:admin": "remotion still src/index.ts NeuroRopAdmin",
+    "still:outro": "remotion still src/index.ts NeuroRopOutro",
+    "render:short": "remotion render src/index.ts RopChapterPreview out/rop-chapter.mp4 --frames=0-270",
+    "render:manager:short": "remotion render src/index.ts NeuroRopManager out/manager-preview.mp4 --frames=0-270",
+    "render:admin:short": "remotion render src/index.ts NeuroRopAdmin out/admin-preview.mp4 --frames=0-270",
+    "render:outro:short": "remotion render src/index.ts NeuroRopOutro out/outro-preview.mp4 --frames=0-180"
   },
   "dependencies": {
     "@remotion/cli": "4.0.523",
