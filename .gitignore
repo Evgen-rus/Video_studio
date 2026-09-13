@@ -1,0 +1,50 @@
+# Dependencies / generated package data
+.vendor/
+node_modules/
+**/node_modules/
+.cache/
+.tmp/
+temp/
+*.log
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+.npmrc
+*.key
+*.pem
+*.pfx
+*.p12
+credentials*.json
+service-account*.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Rendered / heavy binary output
+renders/**/*.mp4
+renders/**/*.mov
+renders/**/*.webm
+renders/**/*.mkv
+renders/**/*.avi
+!renders/.gitkeep
+
+tools/remotion-smoke/out/*
+!tools/remotion-smoke/out/.gitkeep
+
+# Raw screen recordings are usually large and may contain private data
+assets/recordings/**/*.mp4
+assets/recordings/**/*.mov
+assets/recordings/**/*.webm
+!assets/recordings/.gitkeep
+
+# Explicitly private assets
+assets/private/*
+!assets/private/.gitkeep
+
+# Keep setup reports, skill sources, configs and source code visible in Git.

@@ -1,0 +1,12 @@
+{
+  "note": "SETUP.bat creates skills-lock.json with actual commit SHAs.",
+  "video_shotcraft": {
+    "source": "https://github.com/Vincentwei1021/video-shotcraft",
+    "vendor_destination": ".vendor/video-shotcraft",
+    "adapter": ".agents/skills/video-shotcraft/SKILL.md"
+  },
+  "remotion_skills": {
+    "source": "https://github.com/remotion-dev/skills",
+    "destination": ".agents/skills"
+  }
+}

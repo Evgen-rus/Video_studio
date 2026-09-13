@@ -1,0 +1,47 @@
+﻿VIDEO STUDIO SETUP REPORT
+Timestamp: 2026-09-13 12:27:35 +07:00
+Root: D:\My_dev_project\Video_studio
+
+[OK]   Node: v24.12.0
+[OK]   npm: 11.18.0
+[OK]   Git: git version 2.52.0.windows.1
+[OK]   Root Git repository: NOT initialized, as requested
+[OK]   Global Codex config policy: not touched by this script
+[OK]   Global Ponytail policy: not installed, removed, updated, or configured by this script
+
+Installing project-local skills...
+[OK]   video-shotcraft canonical: .vendor/video-shotcraft @ 5e71af35a2daee492dd3ea93e5e8903f32dcd13c
+[OK]   video-shotcraft adapter: .agents/skills/video-shotcraft/SKILL.md
+[OK]   remotion-best-practices: bd566b65d521b40fe92e1f26766e82de9e291693
+[OK]   remotion-create: bd566b65d521b40fe92e1f26766e82de9e291693
+[OK]   remotion-markup: bd566b65d521b40fe92e1f26766e82de9e291693
+[OK]   remotion-studio: bd566b65d521b40fe92e1f26766e82de9e291693
+[OK]   remotion-render: bd566b65d521b40fe92e1f26766e82de9e291693
+[OK]   remotion-docs: bd566b65d521b40fe92e1f26766e82de9e291693
+[OK]   remotion-interactivity: bd566b65d521b40fe92e1f26766e82de9e291693
+[OK]   skills-lock.json: written
+
+Installing local Remotion smoke-test dependencies...
+[OK]   Remotion smoke npm install: completed
+[OK]   Remotion composition discovery: Smoke composition detected
+[OK]   Remotion MP4 render: tools/remotion-smoke/out/smoke.mp4
+
+Final local skill validation:
+[OK]   skill/video-shotcraft: SKILL.md present
+[OK]   skill/remotion-best-practices: SKILL.md present
+[OK]   skill/remotion-create: SKILL.md present
+[OK]   skill/remotion-markup: SKILL.md present
+[OK]   skill/remotion-studio: SKILL.md present
+[OK]   skill/remotion-render: SKILL.md present
+[OK]   skill/remotion-docs: SKILL.md present
+[OK]   skill/remotion-interactivity: SKILL.md present
+[OK]   video-shotcraft vendor source: .vendor/video-shotcraft/SKILL.md present
+
+Isolation:
+[OK]   git init: NOT executed
+[OK]   ~/.codex: NOT modified
+[OK]   ~/.agents: NOT modified
+[OK]   Ponytail: NOT modified
+[OK]   Other repositories: NOT modified
+
+RESULT: OK

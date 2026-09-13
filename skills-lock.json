@@ -1,0 +1,25 @@
+﻿{
+    "generated_at":  "2026-09-13T12:28:04.5109962+07:00",
+    "video_shotcraft":  {
+                            "source":  "https://github.com/Vincentwei1021/video-shotcraft",
+                            "commit":  "5e71af35a2daee492dd3ea93e5e8903f32dcd13c",
+                            "vendor_destination":  ".vendor/video-shotcraft",
+                            "adapter":  ".agents/skills/video-shotcraft/SKILL.md"
+                        },
+    "remotion_skills":  {
+                            "source":  "https://github.com/remotion-dev/skills",
+                            "commit":  "bd566b65d521b40fe92e1f26766e82de9e291693",
+                            "selected":  [
+                                             "remotion-best-practices",
+                                             "remotion-create",
+                                             "remotion-markup",
+                                             "remotion-studio",
+                                             "remotion-render",
+                                             "remotion-docs",
+                                             "remotion-interactivity"
+                                         ],
+                            "destination":  ".agents/skills"
+                        },
+    "global_skills_modified":  false,
+    "ponytail_modified":  false
+}

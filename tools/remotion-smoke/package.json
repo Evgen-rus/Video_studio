@@ -1,0 +1,19 @@
+{
+  "name": "video-studio-remotion-smoke",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "list": "remotion compositions src/index.ts",
+    "studio": "remotion studio src/index.ts --no-open",
+    "render": "remotion render src/index.ts Smoke out/smoke.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.523",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.523"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2"
+  }
+}
